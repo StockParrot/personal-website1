@@ -1,0 +1,55 @@
+body {
+  background-color: #1e1e1e;
+  color: #E6DFC6;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 2em;
+}
+
+h1, h2, h3 {
+  color: #E6DFC6;
+}
+
+p, a {
+  color: #E6DFC6;
+}
+
+button {
+  background-color: #F40F28;
+  color: #1e1e1e;
+  border: none;
+  padding: 0.5em 1em;
+  font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+button:hover {
+  background-color: #EE8E02;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 0.5em;
+}
+
+a:hover {
+  color: #AD3605;
+}
+
+img.profile-pic {
+  border: 3px solid #F40F28;
+}
+
+nav {
+  margin-top: 1.5em;
+}
+
+nav a {
+  color: #F40F28;
+}
+
+nav a:hover {
+  color: #AD3605;
+}
