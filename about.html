@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About</title>
-  <link rel="stylesheet" href="css/light.css" id="themeStylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/light.css" id="themeStylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
   <script>
     function switchTheme() {
       const themeLink = document.getElementById('themeStylesheet');
-      themeLink.href = themeLink.href.includes('light.css') ? 'css/dark.css' : 'css/light.css';
+      themeLink.href = themeLink.href.includes('light.css') ? '../css/dark.css' : '../css/light.css';
     }
   </script>
 </head>
@@ -17,6 +17,6 @@
   <button onclick="switchTheme()">Toggle Theme</button>
   <h1>About</h1>
   <p>Nothing to talk about... for now</p>
-  <a href="index.html">Back</a>
+  <a href="../index.html">Back</a>
 </body>
 </html>
