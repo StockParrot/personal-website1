@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockParrot's website</title>
+  <link id="themeStylesheet" rel="stylesheet" href="css/light.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <script>
+    function switchTheme() {
+      const themeLink = document.getElementById('themeStylesheet');
+      themeLink.href = themeLink.href.includes('light.css') ? 'css/dark.css' : 'css/light.css';
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Roboto Mono', monospace;
+      text-align: center;
+      margin: 0;
+      padding: 2em;
+    }
+    img.profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #F40F28;
+    }
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #F40F28;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="switchTheme()">Toggle Theme</button>
+  <img src="https://avatars.githubusercontent.com/u/202875659" alt="Profile Picture" class="profile-pic" />
+  <h1>StockParrot's website</h1>
+  <p>this is a website under construction, watch out</p>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</body>
+</html>
