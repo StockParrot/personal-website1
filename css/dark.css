@@ -1,87 +1,110 @@
+html {
+  font-size: 20px; /* Default is usually 16px; increase to 18px for better readability */
+}
+
 body {
-  background-color: #121212;
-  color: #E6DFC6;
-  font-family: 'Roboto Mono', monospace;
-  padding: 20px;
-  line-height: 1.6;
+  background-color: #121212;              /* Dark background for a night/dark mode feel */
+  color: #E6DFC6;                         /* Light beige text color for contrast */
+  font-family: 'Roboto Mono', monospace; /* Monospaced font for a technical look */
+  padding: 20px;                          /* Adds space around the body content */
+  line-height: 1.6;                       /* Improves line spacing for readability */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #F40F28;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  color: #F40F28;       /* Bright red for all heading levels */
+  margin-top: 1.5em;    /* Space above headings */
+  margin-bottom: 0.5em; /* Smaller space below headings */
 }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.75em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.25em; }
-h5 { font-size: 1.1em; }
-h6 { font-size: 1em; }
+h1 { font-size: 2em; }       /* h1 is 2 times the base font size */
+h2 { font-size: 1.75em; }    /* h2 is 1.75 times the base font size */
+h3 { font-size: 1.5em; }     /* h3 is 1.5 times the base font size */
+h4 { font-size: 1.25em; }    /* h4 is 1.25 times the base font size */
+h5 { font-size: 1.1em; }     /* h5 is slightly larger than base font size */
+h6 { font-size: 1em; }       /* h6 matches base font size */
 
 a {
-  color: #EE8E02;
-  text-decoration: underline;
+  color: #EE8E02;             /* Orange link color */
+  text-decoration: underline; /* Underlines links by default */
 }
 
 a:hover {
-  color: #F40F28;
+  color: #F40F28;             /* Red color when hovering over links */
 }
 
 p {
-  margin-bottom: 1em;
+  margin-block-start: 0;      /* Removes space above paragraphs */
+  margin-block-end: 0.5em;    /* Adds half an em of space below paragraphs */
 }
 
 ul, ol {
-  margin-left: 2em;
-  margin-bottom: 1em;
+  margin-left: 2em;         /* Indents lists to the right */
+  margin-bottom: 1em;       /* Adds space below lists */
 }
 
 blockquote {
-  border-left: 4px solid #AD3605;
-  padding-left: 1em;
-  color: #CCC;
-  font-style: italic;
-  background-color: #1e1e1e;
-  margin: 1em 0;
+  border-left: 4px solid #AD3605; /* Thick orange left border for quotes */
+  padding-left: 1em;             /* Space between border and text */
+  color: #CCC;                   /* Light gray text color for quotes */
+  background-color: #1e1e1e;     /* Slightly lighter dark background */
+  margin: 1em 0;                 /* Vertical spacing around blockquotes */
 }
 
 code {
-  background-color: #2a2a2a;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-family: 'Roboto Mono', monospace;
-  color: #f9f9f9;
+  background-color: #2a2a2a;         /* Dark gray background for inline code */
+  padding: 0.2em 0.4em;              /* Small padding around code */
+  border-radius: 4px;               /* Rounded corners */
+  font-family: 'Roboto Mono', monospace; /* Monospaced font for code */
+  color: #f9f9f9;                   /* Bright text color for contrast */
 }
 
 pre {
-  background-color: #2a2a2a;
-  padding: 1em;
-  overflow-x: auto;
-  border-radius: 4px;
-  color: #f9f9f9;
+  background-color: #2a2a2a;     /* Dark background for code blocks */
+  padding: 1em;                  /* Padding inside the code block */
+  overflow-x: auto;              /* Enables horizontal scrolling for long lines */
+  border-radius: 4px;            /* Rounded corners */
+  color: #f9f9f9;                /* Bright text color for code */
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  margin: 1em 0;
-  border: 2px solid #AD3605;
+  max-width: 100%;              /* Scales images to fit container width */
+  height: auto;                 /* Maintains aspect ratio */
+  margin: 1em 0;                /* Adds space above and below images */
+  border: 2px solid #AD3605;    /* Orange border around images */
 }
 
 button {
-  background-color: #AD3605;
-  color: #ffffff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+  background-color: #AD3605;    /* Orange background for buttons */
+  color: #ffffff;               /* White text color */
+  border: none;                 /* Removes default button border */
+  padding: 10px;                /* Adds space inside the button */
+  cursor: pointer;              /* Cursor changes to pointer on hover */
 }
 
 .avatar {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  border: 4px solid #F40F28;
-  display: block;
-  margin-bottom: 20px;
+  border-radius: 50%;           /* Makes image circular */
+  width: 150px;                 /* Fixed width */
+  height: 150px;                /* Fixed height */
+  border: 4px solid #F40F28;    /* Thick red border */
+  display: block;               /* Block display removes inline spacing */
+  margin-bottom: 20px;          /* Space below the avatar */
+}
+
+#overlay-en {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50vw;  /* metade da largura da tela */
+  height: 100vh;
+  background-color: #121212;
+  pointer-events: none;  /* deixa clicar normalmente no conteúdo abaixo */
+  display: none;
+  z-index: 9999;
+}
+
+#toggle-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10000; /* maior que o overlay */
 }

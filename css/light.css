@@ -1,85 +1,111 @@
+html {
+  font-size: 20px; /* Default is usually 16px; increase to 18px for better readability */
+}
+
 body {
-  background-color: #E6DFC6;
-  color: #000000;
-  font-family: 'Roboto Mono', monospace;
-  padding: 20px;
-  line-height: 1.6;
+  background-color: #E6DFC6;              /* Sets a light beige background color */
+  color: #000000;                         /* Sets text color to black */
+  font-family: 'Roboto Mono', monospace; /* Uses a monospaced font */
+  padding: 20px;                          /* Adds spacing inside the body on all sides */
+  line-height: 1.6;                       /* Improves readability by spacing lines out */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #F40F28;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  color: #F40F28;       /* Sets all headings to a strong red color */
+  margin-top: 1.5em;    /* Adds space above each heading */
+  margin-bottom: 0.5em; /* Adds less space below each heading */
 }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.75em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.25em; }
-h5 { font-size: 1.1em; }
-h6 { font-size: 1em; }
+h1 { font-size: 2em; }       /* Sets h1 size to 2x base font size */
+h2 { font-size: 1.75em; }    /* Sets h2 size to 1.75x base font size */
+h3 { font-size: 1.5em; }     /* Sets h3 size to 1.5x base font size */
+h4 { font-size: 1.25em; }    /* Sets h4 size to 1.25x base font size */
+h5 { font-size: 1.1em; }     /* Sets h5 size to slightly above base size */
+h6 { font-size: 1em; }       /* h6 matches base font size */
 
 a {
-  color: #EE8E02;
-  text-decoration: underline;
+  color: #EE8E02;           /* Sets links to a strong orange color */
+  text-decoration: underline; /* Underlines links */
 }
 
 a:hover {
-  color: #F40F28;
+  color: #F40F28;           /* Changes link color to red when hovered */
 }
 
 p {
-  margin-bottom: 1em;
+  margin-block-start: 0;      /* same as margin-top in logical syntax */
+  margin-block-end: 0.5em;    /* same as margin-bottom; pick the value you like */
 }
 
+
 ul, ol {
-  margin-left: 2em;
-  margin-bottom: 1em;
+  margin-left: 2em;         /* Indents unordered and ordered lists */
+  margin-bottom: 1em;       /* Adds space below lists */
 }
 
 blockquote {
-  border-left: 4px solid #AD3605;
-  padding-left: 1em;
-  color: #333;
-  font-style: italic;
-  background-color: #f6f1e6;
-  margin: 1em 0;
+  border-left: 4px solid #AD3605; /* Adds a thick colored line on the left */
+  padding-left: 1em;             /* Adds space between border and text */
+  color: #333;                   /* Sets text to dark gray */
+  background-color: #f6f1e6;     /* Light background for visual separation */
+  margin: 1em 0;                 /* Adds vertical spacing around the blockquote */
 }
 
 code {
-  background-color: #f0e8d0;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-family: 'Roboto Mono', monospace;
+  background-color: #f0e8d0;         /* Light yellow background for inline code */
+  padding: 0.2em 0.4em;              /* Adds small padding around inline code */
+  border-radius: 4px;               /* Rounds the corners */
+  font-family: 'Roboto Mono', monospace; /* Uses monospace font for code */
 }
 
 pre {
-  background-color: #f0e8d0;
-  padding: 1em;
-  overflow-x: auto;
-  border-radius: 4px;
+  background-color: #f0e8d0;     /* Same background as inline code */
+  padding: 1em;                  /* Adds spacing inside code blocks */
+  overflow-x: auto;              /* Adds horizontal scroll if content overflows */
+  border-radius: 4px;            /* Rounds the corners of code blocks */
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  margin: 1em 0;
-  border: 2px solid #AD3605;
+  max-width: 100%;              /* Makes sure images don’t overflow container */
+  height: auto;                 /* Maintains image aspect ratio */
+  margin: 1em 0;                /* Adds vertical space above and below images */
+  border: 2px solid #AD3605;    /* Adds a solid border with a dark orange color */
 }
 
 button {
-  background-color: #AD3605;
-  color: #ffffff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+  background-color: #AD3605;    /* Sets button background to dark orange */
+  color: #ffffff;               /* Makes button text white */
+  border: none;                 /* Removes default border */
+  padding: 10px;                /* Adds internal spacing */
+  cursor: pointer;              /* Changes cursor to pointer on hover */
 }
 
 .avatar {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  border: 4px solid #F40F28;
-  display: block;
-  margin-bottom: 20px;
+  border-radius: 50%;           /* Makes the image circular */
+  width: 150px;                 /* Sets fixed width */
+  height: 150px;                /* Sets fixed height */
+  border: 4px solid #F40F28;    /* Adds a thick red border */
+  display: block;               /* Ensures block-level behavior (no inline spacing) */
+  margin-bottom: 20px;          /* Adds spacing below the avatar */
 }
+
+#overlay-en {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50vw;  /* metade da largura da tela */
+  height: 100vh;
+  background-color: #E6DFC6;
+  pointer-events: none;  /* deixa clicar normalmente no conteúdo abaixo */
+  display: none;
+  z-index: 9999;
+}
+
+#toggle-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10000; /* maior que o overlay */
+}
+
+
