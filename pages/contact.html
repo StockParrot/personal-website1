@@ -6,23 +6,7 @@
   <title>Contact</title>
   <link rel="stylesheet" href="" id="themeStylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
-  <script>
-    function setTheme(theme) {
-      const themeLink = document.getElementById('themeStylesheet');
-      themeLink.href = theme === 'dark' ? '../css/dark.css' : '../css/light.css';
-      localStorage.setItem('theme', theme);
-    }
-
-    function switchTheme() {
-      const currentTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-      setTheme(currentTheme);
-    }
-
-    window.onload = () => {
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      setTheme(savedTheme);
-    };
-  </script>
+  <script src="../scripts/theme.js" defer></script>
 </head>
 <body>
   <button onclick="switchTheme()">Toggle Theme</button>
