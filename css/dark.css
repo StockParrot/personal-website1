@@ -98,7 +98,7 @@ button {
   height: 100vh;
   background-color: #121212;
   pointer-events: none;  /* deixa clicar normalmente no conteúdo abaixo */
-  display: none;
+  display: block;
   z-index: 9999;
 }
 
